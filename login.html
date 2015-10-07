@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html> 
-<head>
+<head> 
     <title>login</title>
     <meta charset="utf-8" />
     <link rel="stylesheet" href="css/main.css" />
@@ -24,9 +24,9 @@
                     <h1>Login</h1>
                       <!-- recuadros txt-->
 		          <input type="text" placeholder="Escribe tu suario" name="usuario" required />
-		          <input type="password" placeholder="Escribe tu contraseña " name="contraseña" required/>
+		          <input id="pass" type="password" placeholder="Escribe tu contraseña " name="contraseña" required onkeyup= "valida()" />
 		              <!-- botones-->
-		          <button type="submit" ><h2>Ingresar</h2></button>
+		          <button  id="ingresar" type="submit" ><h2>Ingresar</h2></button>
                 
 	           </form>
             	
@@ -35,6 +35,35 @@
             <p>Copyleft: TDW2.0</p>
         </footer>
         </div>
+        <script>
+        /*codigo en javascript para validar la longitud del campo password*/
+        function valida() {
+            /*realiza la accion de valiar*/
+            var pass = document.getElementById('pass').value;
+            /* pass es equivalente al campo input del password*/
+            
+            /* long sera la longitud del password escrito por el usuario */
+            var long = pass.length;
+            
+            var input= document.getElementById('pass');
+            var ingresar= document.getElementById('ingresar');
+            
+            if(long >=8) {
+                /*boton en verde activo*/
+                input.style.backgroundColor = "#1fc11f";  
+                ingresar.disabled=false;
+            } else {
+                /*boton en rojo inactivo*/
+                input.style.backgroundColor = "#ef2c2c";   
+                ingresar.disabled=true;
+                
+            }
+            // para aparecer la ventanita     alert(pass.length);
+            
+        }
+        </script>
+        
+        
     </body>
 </html>
 
