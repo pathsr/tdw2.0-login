@@ -11,7 +11,7 @@
         <header> <!-- encabezado -->
                 <aside> <span class="naranja">Mi primer login</span> </aside>
                 <nav>
-                    <a class="activo" href="index.html">Inicio</a>
+                    <a class="activo" href="index.php">Inicio</a>
                     |   
                     <a href=" ">Ingresar</a>
                     |
@@ -20,7 +20,7 @@
         </header>
         
             <div id="login"><!--  login -->
-	           <form >
+	           <form action="index.php" method="get" > <!-- method="post"  info en barra de navegacion oculta-->
                     <h1>Login</h1>
                       <!-- recuadros txt-->
 		          <input type="text" placeholder="Escribe tu suario" name="usuario" required />
@@ -32,7 +32,7 @@
             	
             </div>
         <footer> <!-- pie de pagina-->
-            <p><a href="login-registro.html"> Registro </a> Adios <span class="muted"> Gacias por tu visita... </span> vuelve pronto</p>
+            <p>Copyleft: TDW2.0</p>
         </footer>
         </div>
     </body>
